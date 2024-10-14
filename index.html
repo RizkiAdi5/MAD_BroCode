@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AI Learning Platform</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        overflow: hidden; 
+      }
+
+      .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover; 
+        opacity: 1;
+        transition: opacity 0.5s ease; 
+      }
+
+      .fade-out {
+        opacity: 0; 
+      }
+
+      .title {
+        display: flex;                
+        justify-content: center;      
+        align-items: center;        
+        height: 20%; /* Adjust height for title */
+        position: relative;         
+      }
+
+      @keyframes sway {
+  0% {
+    transform: translateX(0) rotate(0deg); /* Start at original position */
+  }
+  25% {
+    transform: translateX(-20px) rotate(-10deg); /* Move left and rotate left */
+  }
+  50% {
+    transform: translateX(0) rotate(0deg); /* Back to center */
+  }
+  75% {
+    transform: translateX(20px) rotate(10deg); /* Move right and rotate right */
+  }
+  100% {
+    transform: translateX(0) rotate(0deg); /* Back to original position */
+  }
+}
+
+.title img {
+  display: block;
+  margin: 0 auto;
+  animation: sway 2s ease-in-out infinite; /* Apply the animation */
+  transform-origin: top center; /* Fix the top of the image in place */
+}
+
+      .box {
+        display: flex; /* Using Flexbox for the box */
+        justify-content: center; /* Centering content horizontally */
+        align-items: flex-end; /* Aligning content at the bottom */
+        height: 80%; /* Remaining height for buttons */
+        position: relative; /* Positioning the box */
+        visibility: hidden; /* Initially hidden */
+      }
+
+      button {
+        border: none; /* Remove border on button */
+        background: none; /* Remove background on button */
+        cursor: pointer; /* Show that the button is clickable */
+      }
+
+      button img {
+        width: 8em; /* Set image width */
+        height: 8em; /* Set image height */
+      }
+
+      .btn {
+        border: none; /* Remove border on button */
+        background: none; /* Remove background on button */
+        cursor: pointer; /* Show that the button is clickable */
+        transition: transform 0.7s ease; /* Add transition effect */
+      }
+
+      .btn:active {
+        transform: scale(1.6); /* Inflate the button when clicked */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Video Background -->
+    <video id="backgroundVideo" class="background-video" autoplay muted>
+      <source id="videoSource" src="asset/malin_bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Title Section with Image -->
+    <div class="title">
+      <img src="asset/component/fixin.png" alt="Header Image" class="img-fluid" />
+    </div>
+
+    <!-- Button Box -->
+    <div class="box d-flex">
+      <button class="btn" id="leftButton">
+        <img src="asset/component/leeft.png" alt="Tombol Kiri" />
+      </button>
+      <button class="btn" id="rightButton">
+        <img src="asset/component/rght.png" alt="Tombol Kanan" />
+      </button>
+    </div>
+
+    <audio id="notificationSound" src="asset/component/mixkit-quick-win-video-game-notification-269.wav"></audio>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+  </body>
+</html>

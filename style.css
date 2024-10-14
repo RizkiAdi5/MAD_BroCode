@@ -1,0 +1,64 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; 
+  }
+
+  .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover; 
+    opacity: 1;
+    transition: opacity 0.5s ease; 
+  }
+
+  .fade-out {
+    opacity: 0; 
+  }
+
+  .title {
+    display: flex;                
+    justify-content: center;      
+    align-items: center;        
+    height: 20%; /* Adjust height for title */
+    position: relative;         
+  }
+
+  .title img {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .box {
+    display: flex; /* Using Flexbox for the box */
+    justify-content: center; /* Centering content horizontally */
+    align-items: flex-end; /* Aligning content at the bottom */
+    height: 80%; /* Remaining height for buttons */
+    position: relative; /* Positioning the box */
+  }
+
+  button {
+    border: none; /* Remove border on button */
+    background: none; /* Remove background on button */
+    cursor: pointer; /* Show that the button is clickable */
+  }
+
+  button img {
+    width: 8em; /* Set image width */
+    height: 8em; /* Set image height */
+  }
+
+  .btn {
+    border: none; /* Remove border on button */
+    background: none; /* Remove background on button */
+    cursor: pointer; /* Show that the button is clickable */
+    transition: transform 0.7s ease; /* Add transition effect */
+  }
+
+  .btn:active {
+    transform: scale(1.6); /* Inflate the button when clicked */
+  }
