@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+
+
+.akaya-kanadaka-regular {
+    font-family: "Akaya Kanadaka", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; 
+  }
+.background-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
+    object-fit: cover; 
+    opacity: 1;
+    transition: opacity 0.5s ease; 
+  }
+  #opening video,
+  #openingA video,
+  #openingB video,
+  #openingA1 video,
+  #openingA1E  video,
+  #openingB1 video,
+  #openingB2E video,
+  #openingB2 video,
+  #openingB2_1 video,
+  #openingB2_2 video,
+  #openingB2_2 video,
+  #openingB2_E video,
+  #openingB1E video{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;   /* Mengatur lebar video sesuai dengan lebar viewport */
+    height: 100vh;  /* Mengatur tinggi video sesuai dengan tinggi viewport */
+    z-index: -1;    /* Membuat video berada di belakang elemen lain */
+    object-fit: cover; /* Memastikan video menutupi seluruh layar dengan crop yang diperlukan */
+    opacity: 1;     /* Pastikan video terlihat */
+    transition: opacity 0.5s ease; /* Transisi smooth saat perubahan opacity */
+
+}
+
+  .fade-out {
+    opacity: 0; 
+  }
+
+  #title{
+    backdrop-filter: blur(10px); /* Efek blur pada background */
+    background: linear-gradient(135deg, #251d15, #161105); /* Gradien untuk efek kayu */
+    -webkit-background-clip: text; /* Memotong latar belakang ke teks */
+    -webkit-text-fill-color: transparent; /* Mengisi warna teks menjadi transparan */
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2), /* Bayangan untuk kedalaman */
+                 2px 2px 0 rgba(255, 255, 255, 0.3); /* Bayangan lebih terang */
+    font-size: 3rem; /* Ukuran font yang lebih besar */
+    border-radius: 0 0 30px 30px; /* Melengkung di bagian bawah */
+    overflow: hidden; /* Untuk memastikan elemen dalam mengikuti border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk efek elevasi */
+    font-family: "Akaya Kanadaka", system-ui;
+    visibility: hidden; /* Awalnya tidak terlihat */
+    transform: translateY(-100%); /* Posisi di luar layar (di atas) */
+    transition: transform 1s ease-in-out, visibility 0s 1s; /* Transisi smooth */
+}
+
+/* Kelas visible untuk membuat elemen muncul */
+#title.visible {
+    visibility: visible; /* Menjadi terlihat */
+    transform: translateY(0); /* Kembali ke posisi normal */
+    transition: transform 1s ease-in-out; /* Transisi halus */
+}
+
+#playIcon{
+    cursor: pointer;
+}
+
+.question{
+    font-family: "Akaya Kanadaka", system-ui;
+    display: none; /* Sembunyikan elemen secara default */
+    position: fixed; /* Mengatur posisi elemen tetap */
+    top: 50%; /* Posisikan elemen di tengah vertikal */
+    left: 50%; /* Posisikan elemen di tengah horizontal */
+    transform: translate(-50%, -50%); /* Pindahkan elemen ke tengah */
+    background-color: rgba(255, 255, 255, 0.8); /* Warna latar belakang dengan transparansi */
+    border-radius: 10px; /* Radius sudut untuk membuat persegi panjang */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    padding: 20px; /* Ruang di dalam elemen */
+    backdrop-filter: blur(5px); /* Efek blur di belakang elemen */
+    z-index: 1000; /* Pastikan elemen muncul di atas elemen lain */
+}
+
+
+button{
+  font-family: "Akaya Kanadaka", system-ui;
+}

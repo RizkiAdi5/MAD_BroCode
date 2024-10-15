@@ -52,11 +52,11 @@ rightButton.addEventListener('click', () => {
 });
 
 // Wait for the DOM to fully load
+// Wait for the DOM to fully load
 window.onload = function() {
-    // Set a 7-second delay
-    setTimeout(function() {
-      // Make the box containing buttons visible
-      document.querySelector('.box').style.visibility = 'visible';
-    }, 4000); // 7000 milliseconds = 7 seconds
-  };
-  
+  // Set a 7-second delay
+  setTimeout(function() {
+    // Make the box containing buttons visible
+    document.querySelector('#title').style.visibility = 'visible';
+  }, 7000); // 7000 milliseconds = 7 seconds
+};

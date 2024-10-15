@@ -41,24 +41,24 @@ body, html {
     position: relative; /* Positioning the box */
   }
 
-  button {
+  .box button {
     border: none; /* Remove border on button */
     background: none; /* Remove background on button */
     cursor: pointer; /* Show that the button is clickable */
   }
 
-  button img {
+  .box button img {
     width: 8em; /* Set image width */
     height: 8em; /* Set image height */
   }
 
-  .btn {
+  .box .btn {
     border: none; /* Remove border on button */
     background: none; /* Remove background on button */
     cursor: pointer; /* Show that the button is clickable */
     transition: transform 0.7s ease; /* Add transition effect */
   }
 
-  .btn:active {
+  .box .btn:active {
     transform: scale(1.6); /* Inflate the button when clicked */
   }
